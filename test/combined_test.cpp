@@ -8,7 +8,7 @@
  *
  *****************************************************************************/
 
-#include "../include/combined.h"
+#include "combined.h"
 
 #include <iostream>
 #include <vector>

@@ -8,7 +8,7 @@
  *
  *****************************************************************************/
 
-#include "../include/nonuniform_histogram.h"
+#include "nonuniform_histogram.h"
 
 #include <iostream>
 #include <random>

@@ -8,7 +8,7 @@
  *
  *****************************************************************************/
 
-#include "../include/uniform_histogram.h"
+#include "uniform_histogram.h"
 
 #include <iostream>
 #include <random>

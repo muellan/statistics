@@ -8,13 +8,13 @@
  *
  *****************************************************************************/
 
-#include "../include/initial.h"
-#include "../include/min.h"
-#include "../include/max.h"
-#include "../include/total.h"
-#include "../include/current.h"
-#include "../include/moments.h"
-#include "../include/min_max_moments.h"
+#include "initial.h"
+#include "min.h"
+#include "max.h"
+#include "total.h"
+#include "current.h"
+#include "moments.h"
+#include "min_max_moments.h"
 
 #include <iostream>
 #include <vector>

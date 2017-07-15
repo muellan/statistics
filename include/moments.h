@@ -26,12 +26,27 @@ namespace stat {
  *****************************************************************************/
 namespace detail {
 
-template<class T, class = typename
-    std::enable_if_t<std::is_arithmetic<std::decay_t<T>>::value>>
-inline constexpr auto
-make_fp(T&& x)
-{
-    return std::common_type_t<double,std::decay_t<T>>(std::forward<T>(x));
+///@brief perform conversion to floating point if necessary
+template<class T, class MaxFpT = double, class =
+    std::enable_if_t<std::is_arithmetic<T>::value>>
+inline auto
+make_fp(T x) {
+    static_assert(std::is_floating_point<MaxFpT>(),
+                  "expects floating point type as 2nd template parameter");
+
+    return std::common_type_t<MaxFpT,T>(x);
+}
+
+
+///@brief forward, since we don't know enough about non-builtin types
+template<class T, class MaxFpT = double, class =
+    std::enable_if_t<!std::is_arithmetic<std::decay_t<T>>::value>>
+inline auto
+make_fp(T&& x) {
+    static_assert(std::is_floating_point<MaxFpT>(),
+                  "expects floating point type as 2nd template parameter");
+
+    return std::forward<T>(x);
 }
 
 } // namespace detail
