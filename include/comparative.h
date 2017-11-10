@@ -2,6 +2,8 @@
 #define AMLIB_STATISTICS_COMPARATIVE_TRACER_H_
 
 #include <set>
+#include <limits>
+
 
 
 namespace am {

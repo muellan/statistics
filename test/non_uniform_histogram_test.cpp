@@ -15,15 +15,13 @@
 #include <functional>
 
 
-using namespace am::stat;
-
 
 //-------------------------------------------------------------------
 int main()
 {
     using std::begin;
 
-    auto h = stat::non_uniform_histogram<double>{
+    auto h = am::stat::nonuniform_histogram<double>{
         -1.0, -0.5, -0.3, -0.2, -0.1, 0.0, 0.1, 0.2, 0.3, 0.5, 1.0};
 
     auto rnd = std::bind(

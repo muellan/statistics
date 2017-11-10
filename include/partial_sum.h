@@ -12,7 +12,7 @@ namespace am {
 namespace stat {
 
 
-/*****************************************************************************
+/*************************************************************************//****
  *
  * @brief    efficiently query partial sums on a mutable vector of integers
  *

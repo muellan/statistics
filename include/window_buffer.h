@@ -8,7 +8,7 @@
 namespace am {
 
 
-/*****************************************************************************
+/*************************************************************************//***
  *
  * @brief container that keeps a fixed number of values in a rolling fashion
  *    - values can only be inserted at one side

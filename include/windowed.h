@@ -9,8 +9,7 @@
 namespace am {
 namespace stat {
 
-
-/****************************************************************************
+/*************************************************************************//***
  *
  * @brief accumulator decorator that restricts an accumulator to a fixed
  *        maximum number of values

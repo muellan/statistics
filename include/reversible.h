@@ -9,7 +9,7 @@ namespace am {
 namespace stat {
 
 
-/****************************************************************************
+/*************************************************************************//***
  *
  * @brief decorator class adding undo operations (pop, -=, -)
  * to statistics accumulators without history (moving minimum, current, ...)

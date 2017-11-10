@@ -40,7 +40,7 @@ void fp_accumulation()
     sum_accumulator<T> sumacc;
     compensated_sum_accumulator<T> csumacc;
     moments_accumulator<T,4> m4acc;
-    min_max_moments_reversible_accumulator<T,4> mmm;
+    reversible_min_max_moments_accumulator<T,4> mmm;
 
     auto v = std::vector<T>{
         1, 2, 3, 10, 11, T(2.5), 3, 4, T(6.6), T(8.92), T(15.1), 18, 13, 14,

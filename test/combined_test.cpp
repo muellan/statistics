@@ -9,24 +9,30 @@
  *****************************************************************************/
 
 #include "combined.h"
+#include "initial.h"
+#include "current.h"
+#include "min_max_moments.h"
+#include "total.h"
+#include "histogram_accumulator.h"
 
 #include <iostream>
 #include <vector>
 
-using namespace am::stat;
-
 //-------------------------------------------------------------------
 void test_combined_accumulation()
 {
-    stat::combined_accumulator<
-        stat::initial_value_accumulator<double>,
-        stat::current_value_accumulator<double>,
-        stat::reversible_min_accumulator<double>,
-        stat::reversible_max_accumulator<double>,
-        stat::sum_accumulator<double>,
-        stat::compensated_sum_accumulator<double>,
-        stat::moments_accumulator<double,4>,
-        stat::uniform_histogram_accumulator<double>
+    using namespace am;
+    using namespace am::stat;
+
+    combined_accumulator<
+        initial_value_accumulator<double>,
+        current_value_accumulator<double>,
+        reversible_min_accumulator<double>,
+        reversible_max_accumulator<double>,
+        sum_accumulator<double>,
+        compensated_sum_accumulator<double>,
+        moments_accumulator<double,4>,
+        uniform_histogram_accumulator<double>
     > a;
 
     auto v = std::vector<double>{

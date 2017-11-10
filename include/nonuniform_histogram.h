@@ -12,7 +12,7 @@ namespace am {
 namespace stat {
 
 
-/*****************************************************************************
+/*************************************************************************//****
  *
  * @brief holds a vector of bin counts
  *        bins can have different widths
