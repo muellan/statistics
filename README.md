@@ -36,7 +36,7 @@ An accumulator provides running statistical analyses of a (growing) sample of va
      - ```kurtosis_accumulator```  (includes running mean, variance & skewness)
  - ```comparative_accumulator```
      - ```min_accumulator```
-     -``` max_accumulator```
+     - ``` max_accumulator```
  - ```reversible_comparative_accumulator``` (supports undo/pop operation)
      - ```reversible_min_accumulator```
      - ```reversible_max_accumulator```
@@ -66,7 +66,7 @@ accumulator::operator -= (const argument_type&);
 ```
 
 #### Accumulator Decorators
- - ```windowed<Accumulator>```  restricts statistics on the n latest samples
+ - ```windowed<Accumulator>```  restricts statistics to the n latest samples
  - ```reversible<Accumulator>``` augments an accumulator with an undo history  
  - ```combined<Accumulators...>``` combines several accumulators into one
  
